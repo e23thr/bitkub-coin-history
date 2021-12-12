@@ -16,4 +16,6 @@ git commit -m "Added history/${current_file}"
 
 echo "history/${current_file}" >> .gitignore
 git add .
-git commit -m "Ignore history/{current_file}"
+git commit -m "Ignore history/${current_file}"
+
+rm history/$current_file
