@@ -12,10 +12,11 @@ current_file=$(date +"%F.txt")
 
 git add .
 git commit -m "Added history/${current_file}"
-#git push 
+git push
 
 echo "history/${current_file}" >> .gitignore
 git add .
 git commit -m "Ignore history/${current_file}"
+git push
 
 rm history/$current_file
