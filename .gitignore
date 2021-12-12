@@ -127,5 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-history/2021-12-12.txt
-history/2021-12-12.txt
+
+# dynamic ignores
+
+
