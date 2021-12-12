@@ -7,7 +7,7 @@ import websockets
 from dotenv import load_dotenv
 
 load_dotenv("settings.txt")
-HISTORY_PATH = os.path.join(os.getcwd(), "history")
+HISTORY_PATH = os.path.join(os.getcwd(), "data_history")
 WSS_URL = "wss://api.bitkub.com/websocket-api/"
 DATA_STR = ""
 
