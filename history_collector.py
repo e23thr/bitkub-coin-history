@@ -54,7 +54,6 @@ async def collect_bitkub_history():
             logging.info('Connecting to websocket')
             try:
                 async for message in websocket:
-                    logging.info("reading message {message}")
                     await parse_socket_data(message)
             except:
                 logging.error('Websocket reading error')
