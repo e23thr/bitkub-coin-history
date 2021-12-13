@@ -36,7 +36,7 @@ def create_wss_url():
 
 
 def get_file_name():
-    return os.path.join(HISTORY_PATH, f"{datetime.now().strftime('%Y-%m-%d')}.txt")
+    return os.path.join(HISTORY_PATH, f"{datetime.now().strftime('%Y-%m-%dT%H')}.txt")
 
 
 async def parse_socket_data(data):

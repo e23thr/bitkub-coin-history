@@ -6,7 +6,7 @@ BASE_DIR=$(dirname "$0")
 cd $BASE_DIR
 
 
-current_file=$(date +"%F.txt")
+current_file=$(date +"%FT%H.txt")
 
 sleep 120 # cron must set to 23:50 daily
 
