@@ -49,11 +49,16 @@ async def parse_socket_data(data):
 
 async def collect_bitkub_history():
     # logging.info(WSS_URL)
-    async for websocket in websockets.connect(WSS_URL):
-        async for message in websocket:
-            await parse_socket_data(message)
-        # buffer = await websocket.read(1024)
-        # parse_socket_data(buffer)
+    try:
+        async for websocket in websockets.connect(WSS_URL):
+            logging.info('Connecting to websocket')
+            try:
+                async for message in websocket:
+                    await parse_socket_data(message)
+            except:
+                logging.error('Websocket reading error')
+    except:
+        logging.error('Cannot connect to websocket')
 
 
 if __name__ == "__main__":
