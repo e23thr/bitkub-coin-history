@@ -8,7 +8,7 @@ cd $BASE_DIR
 
 current_file=$(date +"%FT%H.txt")
 
-sleep 120 # cron must set to 23:50 daily
+sleep 120 # cron must set to hourly minus 1 minute
 
 git add .
 git commit -m "Added data_history/${current_file}"
